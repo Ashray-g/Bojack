@@ -5,6 +5,7 @@ import java.util.Optional;
 public class Variable extends Term {
     private final String name;
     private Optional<Double> value;
+    public static int valCall = 0;
 
     public Variable(String name) {
         this.name = name;
@@ -22,10 +23,16 @@ public class Variable extends Term {
     }
 
     public double getValue() {
+        valCall++;
         if (value.isPresent()) return value.get();
         else {
             throw new RuntimeException("Variable value not set in evaluation");
         }
+    }
+
+    @Override
+    public Optional<Term> simplify() {
+        return Optional.of(this);
     }
 
     @Override

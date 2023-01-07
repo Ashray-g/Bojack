@@ -1,5 +1,7 @@
 package autograd.autodiff;
 
+import java.util.Optional;
+
 public class Expression extends Term {
 
     private final Term t1, t2;
@@ -9,6 +11,13 @@ public class Expression extends Term {
         this.t1 = t1;
         this.t2 = t2;
         this.operator = operator;
+    }
+
+    public Optional<Term> simplify(){
+        Optional<Term> sim = operator.simplify(t1, t2);
+
+        if(sim.isEmpty()) return Optional.of(this);
+        return sim;
     }
 
     @Override

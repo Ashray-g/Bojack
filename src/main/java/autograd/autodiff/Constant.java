@@ -1,5 +1,7 @@
 package autograd.autodiff;
 
+import java.util.Optional;
+
 public class Constant extends Term {
 
     private final double value;
@@ -16,6 +18,11 @@ public class Constant extends Term {
     @Override
     public double getValue() {
         return value;
+    }
+
+    @Override
+    public Optional<Term> simplify() {
+        return Optional.of(this);
     }
 
     @Override

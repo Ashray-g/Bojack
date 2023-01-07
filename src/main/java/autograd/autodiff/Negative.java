@@ -1,6 +1,9 @@
 package autograd.autodiff;
 
+import java.util.Optional;
+
 public class Negative extends Function{
+    public static int valCall = 0;
 
     private final Term t1;
 
@@ -15,7 +18,13 @@ public class Negative extends Function{
 
     @Override
     public double getValue() {
+        valCall++;
         return -t1.getValue();
+    }
+
+    @Override
+    public Optional<Term> simplify() {
+        return Optional.of(this);
     }
 
     @Override

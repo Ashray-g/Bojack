@@ -1,6 +1,9 @@
 package autograd.autodiff;
 
+import java.util.Optional;
+
 public class Sin extends Function {
+    public static int valCall = 0;
     private final Term t1;
 
     public Sin(Term t1) {
@@ -14,7 +17,13 @@ public class Sin extends Function {
 
     @Override
     public double getValue() {
+        valCall++;
         return Math.sin(t1.getValue());
+    }
+
+    @Override
+    public Optional<Term> simplify() {
+        return Optional.of(this);
     }
 
     @Override
