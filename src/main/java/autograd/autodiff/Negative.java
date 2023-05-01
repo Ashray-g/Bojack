@@ -2,7 +2,7 @@ package autograd.autodiff;
 
 import java.util.Optional;
 
-public class Negative extends Function{
+public class Negative extends Function {
     public static int valCall = 0;
 
     private final Term t1;

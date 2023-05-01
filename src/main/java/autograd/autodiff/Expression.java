@@ -13,10 +13,10 @@ public class Expression extends Term {
         this.operator = operator;
     }
 
-    public Optional<Term> simplify(){
+    public Optional<Term> simplify() {
         Optional<Term> sim = operator.simplify(t1, t2);
 
-        if(sim.isEmpty()) return Optional.of(this);
+        if (sim.isEmpty()) return Optional.of(this);
         return sim;
     }
 
@@ -27,7 +27,7 @@ public class Expression extends Term {
 
     @Override
     public Term getDerivative(Variable variable) {
-        if(t1 instanceof Constant && t2 instanceof Constant) return new Constant(0);
+        if (t1 instanceof Constant && t2 instanceof Constant) return new Constant(0);
         return operator.getDerivative(t1, t2, variable);
     }
 

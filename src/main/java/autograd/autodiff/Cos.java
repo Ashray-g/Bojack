@@ -12,10 +12,7 @@ public class Cos extends Function {
 
     @Override
     public Term getDerivative(Variable variable) {
-        return new Expression(
-                new Negative(new Sin(t1)),
-                new Mul(),
-                t1.getDerivative(variable));
+        return new Expression(new Negative(new Sin(t1)), new Mul(), t1.getDerivative(variable));
     }
 
     @Override

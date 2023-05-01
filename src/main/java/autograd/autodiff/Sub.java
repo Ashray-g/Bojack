@@ -4,6 +4,7 @@ import java.util.Optional;
 
 public class Sub extends Operator {
     public static int valCall = 0;
+
     @Override
     public String toString() {
         return " - ";
@@ -23,9 +24,9 @@ public class Sub extends Operator {
     @Override
     public Optional<Term> simplify(Term t1, Term t2) {
 
-        if(t1 instanceof Constant || t2 instanceof Constant){
-            if(t1.getValue() == 0) return Optional.of(new Negative(t2));
-            if(t2.getValue() == 0) return Optional.of(t1);
+        if (t1 instanceof Constant || t2 instanceof Constant) {
+            if (t1.getValue() == 0) return Optional.of(new Negative(t2));
+            if (t2.getValue() == 0) return Optional.of(t1);
         }
 
         return Optional.empty();

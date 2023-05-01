@@ -4,6 +4,7 @@ import java.util.Optional;
 
 public class Div extends Operator {
     public static int valCall = 0;
+
     @Override
     public String toString() {
         return " / ";
@@ -33,7 +34,7 @@ public class Div extends Operator {
     @Override
     public Optional<Term> simplify(Term t1, Term t2) {
 
-        if(t1 instanceof Constant && t1.getValue() == 0) return Optional.of(new Constant(0));
+        if (t1 instanceof Constant && t1.getValue() == 0) return Optional.of(new Constant(0));
 
         return Optional.empty();
     }

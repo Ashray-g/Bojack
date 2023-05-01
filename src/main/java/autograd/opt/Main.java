@@ -1,7 +1,6 @@
 package autograd.opt;
 
 import autograd.autodiff.AlgebraSystem;
-
 import java.util.Arrays;
 
 public class Main {
@@ -10,8 +9,8 @@ public class Main {
         SampleAlgebraSystems systems = new SampleAlgebraSystems();
 
         AlgebraSystem system = systems.sinx_times_x2_plus_y2;
-//        AlgebraSystem system = systems.x2_plus_y2;
-//        AlgebraSystem system = systems.cosx_timse_siny;
+        //        AlgebraSystem system = systems.x2_plus_y2;
+        //        AlgebraSystem system = systems.cosx_timse_siny;
 
         double[] guess = {-1, 1};
 

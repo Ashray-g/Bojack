@@ -1,7 +1,6 @@
 package autograd.opt;
 
 import autograd.autodiff.*;
-
 import java.util.Arrays;
 
 public class SimpleGradientDecent extends Solver {
@@ -38,14 +37,14 @@ public class SimpleGradientDecent extends Solver {
 
         int iter;
         for (iter = 0; iter < max_iter; iter++) {
-            if (print)System.out.println("Guess: " + Arrays.toString(guess));
+            if (print) System.out.println("Guess: " + Arrays.toString(guess));
             applyGuess();
 
             long time1 = System.currentTimeMillis();
             double[][] evaluation = gradient.evaluateAtPoint();
             evalGrad += System.currentTimeMillis() - time1;
 
-            if (print)System.out.println("Eval: " + Arrays.deepToString(evaluation));
+            if (print) System.out.println("Eval: " + Arrays.deepToString(evaluation));
 
             double maxSilon = 0;
             for (int i = 0; i < evaluation[0].length; i++)

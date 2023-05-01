@@ -63,6 +63,6 @@
   <testcase classname="autodiff.DerivativeTest" name="x_squared_times_y_squared" time="0.013"/>
   <testcase classname="autodiff.DerivativeTest" name="x_times_y" time="0"/>
   <testcase classname="autodiff.DerivativeTest" name="ln_x" time="0"/>
-  <testcase classname="autodiff.DerivativeTest" name="cos_x_times_sin_y" time="0.001"/>
-  <testcase classname="autodiff.DerivativeTest" name="a_time_b_plus_c" time="0"/>
+  <testcase classname="autodiff.DerivativeTest" name="cos_x_times_sin_y" time="0"/>
+  <testcase classname="autodiff.DerivativeTest" name="a_time_b_plus_c" time="0.001"/>
 </testsuite>

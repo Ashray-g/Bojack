@@ -60,6 +60,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="opt.SimpleGradDecentTest" name="cosx_timse_siny" time="0.004"/>
-  <testcase classname="opt.SimpleGradDecentTest" name="x2_times_y2" time="0"/>
+  <testcase classname="opt.SimpleGradDecentTest" name="cosx_timse_siny" time="0.003"/>
+  <testcase classname="opt.SimpleGradDecentTest" name="x2_times_y2" time="0.001"/>
 </testsuite>

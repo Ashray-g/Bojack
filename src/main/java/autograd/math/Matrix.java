@@ -21,7 +21,7 @@ public class Matrix {
         return matrix;
     }
 
-    public void setMatrix(Term[][] arr){
+    public void setMatrix(Term[][] arr) {
         this.matrix = arr;
         this.rows = arr.length;
         this.cols = arr[0].length;
@@ -48,10 +48,10 @@ public class Matrix {
         return result;
     }
 
-    public double[][] eval(){
+    public double[][] eval() {
         double[][] eval = new double[rows][cols];
-        for(int i = 0;i<rows;i++){
-            for(int j = 0;j<cols;j++){
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 eval[i][j] = matrix[i][j].getValue();
             }
         }
