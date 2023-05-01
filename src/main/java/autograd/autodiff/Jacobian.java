@@ -10,6 +10,8 @@ public class Jacobian {
     public Jacobian(AlgebraSystem algebraSystem) {
         this.functions = algebraSystem.getFunctions().length;
         this.variables = algebraSystem.getVariables().length;
+        gradient = new double[functions][variables];
+        ;
         this.algebraSystem = algebraSystem;
         matrix = new Matrix(functions, variables);
 
@@ -30,9 +32,9 @@ public class Jacobian {
         return matrix;
     }
 
-    public double[][] evaluateAtPoint() {
+    double[][] gradient;
 
-        double[][] gradient = new double[functions][variables];
+    public double[][] evaluateAtPoint() {
 
         for (int i = 0; i < functions; i++) {
             for (int j = 0; j < variables; j++) {

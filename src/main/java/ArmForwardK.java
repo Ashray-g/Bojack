@@ -55,7 +55,6 @@ public class ArmForwardK {
             link.getMatrix()[3][1] = new Constant(0);
             link.getMatrix()[3][2] = new Constant(0);
             link.getMatrix()[3][3] = new Constant(1);
-            System.out.println(link);
 
             links[i] = link;
         }

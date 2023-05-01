@@ -26,7 +26,11 @@ public class Pow extends Operator {
     @Override
     public double getVal(Term t1, Term t2) {
         valCall++;
-        return Math.pow(t1.getValue(), t2.getValue());
+        double val = t1.getValue();
+        if (val == 0) return 0;
+        if (val == 1) return 1;
+
+        return Math.pow(val, t2.getValue());
     }
 
     @Override

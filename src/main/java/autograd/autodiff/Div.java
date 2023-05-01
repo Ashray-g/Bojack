@@ -12,6 +12,10 @@ public class Div extends Operator {
 
     @Override
     public Term getDerivative(Term t1, Term t2, Variable variable) {
+        //        if(t1 instanceof Constant){ TODO
+        //            return new Expression(t1, new Mul(), new Negative(new Expression(t2, new
+        // Pow(), new Constant(-2))));
+        //        }
         return new Expression(
                 new Expression(
                         new Expression(t1.getDerivative(variable), new Mul(), t2),
@@ -25,8 +29,8 @@ public class Div extends Operator {
     public double getVal(Term t1, Term t2) {
         valCall++;
         double val1 = t1.getValue();
-        double val2 = t2.getValue();
         if (val1 == 0) return 0;
+        double val2 = t2.getValue();
 
         return val1 / val2;
     }

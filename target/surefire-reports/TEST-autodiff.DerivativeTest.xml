@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="autodiff.DerivativeTest" time="0.014" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="autodiff.DerivativeTest" time="0.015" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -62,7 +62,7 @@
   </properties>
   <testcase classname="autodiff.DerivativeTest" name="x_squared_times_y_squared" time="0.013"/>
   <testcase classname="autodiff.DerivativeTest" name="x_times_y" time="0"/>
-  <testcase classname="autodiff.DerivativeTest" name="ln_x" time="0"/>
+  <testcase classname="autodiff.DerivativeTest" name="ln_x" time="0.001"/>
   <testcase classname="autodiff.DerivativeTest" name="cos_x_times_sin_y" time="0"/>
   <testcase classname="autodiff.DerivativeTest" name="a_time_b_plus_c" time="0.001"/>
 </testsuite>

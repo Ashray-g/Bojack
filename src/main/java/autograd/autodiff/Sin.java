@@ -12,6 +12,7 @@ public class Sin extends Function {
 
     @Override
     public Term getDerivative(Variable variable) {
+        if (t1 instanceof Constant) return new Constant(0);
         return new Expression(new Cos(t1), new Mul(), t1.getDerivative(variable));
     }
 

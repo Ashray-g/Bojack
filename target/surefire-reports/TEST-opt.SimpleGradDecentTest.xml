@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="opt.SimpleGradDecentTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="opt.SimpleGradDecentTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,6 +60,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="opt.SimpleGradDecentTest" name="cosx_timse_siny" time="0.003"/>
+  <testcase classname="opt.SimpleGradDecentTest" name="cosx_timse_siny" time="0.005"/>
   <testcase classname="opt.SimpleGradDecentTest" name="x2_times_y2" time="0.001"/>
 </testsuite>

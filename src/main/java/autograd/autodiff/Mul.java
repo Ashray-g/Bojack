@@ -22,14 +22,21 @@ public class Mul extends Operator {
                 new Expression(t1.getDerivative(variable), new Mul(), t2));
     }
 
+    /**
+     * Optimized when term 2 is 0
+     *
+     * @param t1 term 1
+     * @param t2 term 2
+     * @return multiplication of both terms
+     */
     @Override
     public double getVal(Term t1, Term t2) {
         valCall++;
-        double val1 = t1.getValue();
-        if (val1 == 0) return 0;
-
         double val2 = t2.getValue();
         if (val2 == 0) return 0;
+
+        double val1 = t1.getValue();
+        if (val1 == 0) return 0;
 
         return val1 * val2;
     }

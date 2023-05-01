@@ -60,6 +60,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="autodiff.JacobianHessianTest" name="cosx_times_siny" time="0.001"/>
-  <testcase classname="autodiff.JacobianHessianTest" name="x_times_y_and_x_sq_plus_y_sq" time="0"/>
+  <testcase classname="autodiff.JacobianHessianTest" name="cosx_times_siny" time="0"/>
+  <testcase classname="autodiff.JacobianHessianTest" name="x_times_y_and_x_sq_plus_y_sq" time="0.001"/>
 </testsuite>
