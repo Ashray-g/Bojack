@@ -85,6 +85,9 @@ public class ArmForwardK {
         double goalX = 4;
         double goalY = 1;
 
+        x_coord = x_coord.simplify().get();
+        y_coord = y_coord.simplify().get();
+
         Expression costX =
                 new Expression(
                         new Expression(x_coord, new Sub(), new Constant(goalX)),

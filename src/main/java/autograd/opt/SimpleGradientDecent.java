@@ -10,6 +10,14 @@ public class SimpleGradientDecent extends Solver {
 
     private final Jacobian gradient;
 
+    private double epsilon = 1E-3;
+
+    public SimpleGradientDecent(
+            AlgebraSystem system, int iter_max, double[] initial_guess, double epsilon) {
+        this(system, iter_max, initial_guess);
+        this.epsilon = epsilon;
+    }
+
     public SimpleGradientDecent(AlgebraSystem system, int iter_max, double[] initial_guess) {
         super(system);
         this.guess = initial_guess;
@@ -49,7 +57,7 @@ public class SimpleGradientDecent extends Solver {
             double maxSilon = 0;
             for (int i = 0; i < evaluation[0].length; i++)
                 maxSilon = Math.max(maxSilon, Math.abs(evaluation[0][i]));
-            if (maxSilon < 1E-3) break;
+            if (maxSilon < epsilon) break;
 
             if (print) {
                 System.out.println("Grad: " + Arrays.deepToString(evaluation));

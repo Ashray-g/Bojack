@@ -44,8 +44,12 @@ public class Mul extends Operator {
     @Override
     public Optional<Term> simplify(Term t1, Term t2) {
 
-        if (t1 instanceof Constant && t1.getValue() == 0) return Optional.of(new Constant(0));
-        if (t2 instanceof Constant && t2.getValue() == 0) return Optional.of(new Constant(0));
+        if (t1 instanceof Constant && t1.getValue() == 0) {
+            return Optional.of(new Constant(0));
+        }
+        if (t2 instanceof Constant && t2.getValue() == 0) {
+            return Optional.of(new Constant(0));
+        }
 
         return Optional.empty();
     }
