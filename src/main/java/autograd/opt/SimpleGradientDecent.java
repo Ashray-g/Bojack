@@ -12,10 +12,13 @@ public class SimpleGradientDecent extends Solver {
 
     private double epsilon = 1E-3;
 
+    private double k_factor = 50;
+
     public SimpleGradientDecent(
-            AlgebraSystem system, int iter_max, double[] initial_guess, double epsilon) {
+            AlgebraSystem system, int iter_max, double[] initial_guess, double epsilon, double k_factor) {
         this(system, iter_max, initial_guess);
         this.epsilon = epsilon;
+        this.k_factor = k_factor;
     }
 
     public SimpleGradientDecent(AlgebraSystem system, int iter_max, double[] initial_guess) {
@@ -65,7 +68,7 @@ public class SimpleGradientDecent extends Solver {
             }
 
             for (int i = 0; i < guess.length; i++) {
-                guess[i] += -evaluation[0][i] / 50;
+                guess[i] += -evaluation[0][i] / 70;
             }
 
             if (print) System.out.println();

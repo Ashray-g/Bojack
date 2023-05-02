@@ -104,7 +104,7 @@ public class ArmForwardK {
 
         SimpleGradientDecent grad =
                 new SimpleGradientDecent(
-                        systemCost, 100_000, new double[] {Math.PI / 2, 0, 0, 0, 0, 0});
+                        systemCost, 100_000, new double[] {Math.PI / 2, 0, 0, 0, 0, 0}, 1E-3, 70);
 
         double[] sol = grad.solve(false);
 
